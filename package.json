@@ -1,6 +1,6 @@
 {
-  "name": "avantage",
-  "version": "1.0.0",
+  "name": "@j4ys0n/avantage",
+  "version": "1.0.1",
   "description": "TypeScript wrapper for Alpha Vantage API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -13,6 +13,10 @@
   },
   "author": "Jayson Jacobs",
   "license": "ISC",
+  "repository": "j4ys0n/avantage",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "dependencies": {
     "axios": "^1.7.8",
     "dotenv": "^16.4.7",
