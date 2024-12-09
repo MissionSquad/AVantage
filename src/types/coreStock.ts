@@ -147,5 +147,5 @@ export interface SearchResult {
 }
 
 export interface SearchResults {
-  [key: string]: SearchResult
+  bestmatches: SearchResult[]
 }

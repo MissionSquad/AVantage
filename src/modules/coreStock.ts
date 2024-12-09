@@ -146,6 +146,14 @@ export class CoreStock {
       datatype
     };
 
-    return this.api.call<SearchResults>('SYMBOL_SEARCH', params);
+    const { error, reason, data } = await this.api.call<SearchResults>('SYMBOL_SEARCH', params);
+    if (data != null) {
+      const { bestmatches } = data
+      if (!Array.isArray(bestmatches)) {
+        return { error, reason, data: [] };
+      }
+      return { error, reason, data: bestmatches }
+    }
+    return { error, reason, data: [] }
   }
 }
