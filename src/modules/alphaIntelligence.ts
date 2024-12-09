@@ -1,4 +1,4 @@
-import { FixedWindowAnalyticsParams, InsiderTransactions, NewsSentiment, NewsSentimentsParams, SlidingWindowAnalyticsParams, TopGainersLosers } from '../types/alphaIntelligence'
+import { FixedWindowAnalyticsParams, InsiderTransactions, NewsSentiments, NewsSentimentsParams, SlidingWindowAnalyticsParams, TopGainersLosers } from '../types/alphaIntelligence'
 import { Api } from '../utils/api'
 
 export class AlphaIntelligence {
@@ -26,7 +26,7 @@ export class AlphaIntelligence {
       limit: limit.toString()
     };
 
-    return this.api.call<NewsSentiment>('NEWS_SENTIMENT', params);
+    return this.api.call<NewsSentiments>('NEWS_SENTIMENT', params);
   }
 
   async topGainersLosers() {

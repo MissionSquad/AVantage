@@ -55,6 +55,13 @@ export interface NewsSentiment {
   ticker_sentiment: TickerSentiment[]
 }
 
+export interface NewsSentiments {
+  items: number,
+  sentiment_score_definition: string,
+  relevance_score_definition: string,
+  feed: NewsSentiment[]
+}
+
 export interface TopTicker {
   ticker: string
   price: number
