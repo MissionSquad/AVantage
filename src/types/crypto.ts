@@ -53,4 +53,5 @@ export interface RealtimeCurrencyExchangeRate {
   time_zone: string
   bid_price: number
   ask_price: number
+  error_message?: string
 }

@@ -1,6 +1,6 @@
 {
   "name": "@j4ys0n/avantage",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "TypeScript wrapper for Alpha Vantage API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
