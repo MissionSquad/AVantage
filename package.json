@@ -1,5 +1,5 @@
 {
-  "name": "@j4ys0n/avantage",
+  "name": "@missionsquad/avantage",
   "version": "1.0.4",
   "description": "TypeScript wrapper for Alpha Vantage API",
   "main": "lib/index.js",
@@ -12,8 +12,8 @@
     "prepack": "yarn build"
   },
   "author": "Jayson Jacobs",
-  "license": "ISC",
-  "repository": "j4ys0n/avantage",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/MissionSquad/AVantage",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
