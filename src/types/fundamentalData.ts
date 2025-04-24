@@ -1,4 +1,5 @@
 export interface ListingStatusParams {
+  symbol?: string;
   date?: string;
   state?: 'active' | 'delisted';
 }

@@ -41,6 +41,7 @@ export class FundamentalData {
   }
 
   async listingStatus({
+    symbol,
     date,
     state = 'active'
   }: ListingStatusParams = {}) {
@@ -53,11 +54,15 @@ export class FundamentalData {
     }
 
     const { data } = await this.api.callCSV<ListingStatus[]>('LISTING_STATUS', params);
+    const mapped = (data ?? []).map(({delistingdate, ...i}) => ({
+      ...i,
+      delistingdate: delistingdate === 'null' ? null : delistingdate
+    }))
+    const response = symbol != null && symbol.trim() !== ''
+      ? mapped.filter(i => i.symbol === symbol)
+      : mapped
     return {
-      data: (data ?? []).map(({delistingdate, ...i}) => ({
-        ...i,
-        delistingdate: delistingdate === 'null' ? null : delistingdate
-      }))
+      data: response
     }
   }
 
